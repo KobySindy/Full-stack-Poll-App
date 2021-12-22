@@ -1,0 +1,16 @@
+# Use root/example as user/password credentials
+version: "3.8"
+
+services:
+  database:
+    image: mongo
+    container_name: poll-app-container
+    environment:
+      - MONGO_INITDB_DATABASE=pollAppDB
+      - MONGO_INITDB_ROOT_USERNAME=pollAppUser
+      - MONGO_INITDB_ROOT_PASSWORD=QWEqwe123
+    volumes:
+      - ./mongo-docker/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./mongo-docker/mongo-volume:/data/db
+    ports:
+      - 27017:27017
