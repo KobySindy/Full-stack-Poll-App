@@ -1,7 +1,8 @@
 # NodeJS-Backend-Poll-App
 
-#Installing instructions:
--Install Docker
--Run command: docker-compose up -d
+#Installing instructions:<br>
+<br>
+-Install Docker <br>
+-Run command: docker-compose up -d <br>
 -Run command: node index
 
